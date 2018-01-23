@@ -2080,9 +2080,9 @@
             var p = Math.abs(m1 - m2);
             var shouldShow = (p > 1 && p != 89);
             if (shouldShow) {
-                box.addClass('has-gap').removeClass('no-gap').find('.gap').css('visibility', 'visible');
+                //box.addClass('has-gap').removeClass('no-gap').find('.gap').css('visibility', 'visible');
             } else {
-                box.removeClass('has-gap').addClass('no-gap').find('.gap').css('visibility', 'hidden');
+                //box.removeClass('has-gap').addClass('no-gap').find('.gap').css('visibility', 'hidden');
             }
             var h1 = box.find('table.month1').height();
             var h2 = box.find('table.month2').height();
@@ -2206,7 +2206,7 @@
                 '   </table>';
 
             if (hasMonth2()) {
-                html += '<div class="gap">' + getGapHTML() + '</div>' +
+                html += '<div class="gap">' + '</div>' +
                     '<table class="month2" cellspacing="0" border="0" cellpadding="0">' +
                     '   <thead>' +
                     '   <tr class="caption">' +
@@ -2481,6 +2481,8 @@
                 }
                 html.push('</tr>');
             }
+            console.log(html.length)
+            
             return html.join('');
         }
 
